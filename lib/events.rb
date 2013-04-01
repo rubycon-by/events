@@ -1,5 +1,9 @@
 require "events/version"
 
 module Events
-  # Your code goes here...
+  def initialize
+    Rails.application.routes.draw do |map|
+      resources :events
+    end
+  end
 end
